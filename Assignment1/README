@@ -1,0 +1,30 @@
+Makefile rules:
+
+Makefile in project folder (Assignment1_DPLKYL002):
+make - compile this project folder only
+*make all - compile the entire project
+*make run - run the program
+*make clean - clean the entire project
+
+* - use these rules here
+
+Makefiles in /libs/databaselib and /libs/menuinterfacelib folders:
+make - compile this folder only
+make clean - clean this folder only
+
+Explanation of what each file does and how it fits into the program as a whole:
+
+Database.cpp & Database.h - These source and header files represents the database engine - implementing all 
+			the database functionality such as: adding a student (or overwriting existing student),
+			reading (viewing) the database, saving (writing to) the database, displaying student's data
+			and grading student. It also processes the menu choice selected by the user and passes it to
+			the above methods.
+
+MenuInterface.cpp /& MenuInterface.h - These source and header files represents the simple menu-based interface - displaying
+					it, as well as clearing the terminal (console) window.
+
+Driver.cpp - This driver source file contains the main function (entry point to the program). It sets up the database from 
+	information stored in database.txt and reads menu options continuously, getting user input menu choice. It also exits
+	from the application if the termination condition 'q' is selected (to quit).
+
+database.txt - This file contains the database of student records in the following text format: <name> <surname> <student number> <class record>.
